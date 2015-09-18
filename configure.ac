@@ -69,5 +69,5 @@ AC_SUBST(PCRE_LDFLAGS)
 AC_SUBST(PCRE_CPPFLAGS)
 AC_SUBST(PCRE_LIBS)
 
-AC_CONFIG_FILES([Makefile src/Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile lib/Makefile])
 AC_OUTPUT

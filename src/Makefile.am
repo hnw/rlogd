@@ -1,13 +1,10 @@
 AM_CPPFLAGS = -DSYSCONFDIR=\"${sysconfdir}\" -DLOCALSTATEDIR=\"${localstatedir}\" 
-CFLAGS += -W -Wall -Wno-unused-parameter -fno-strict-aliasing
+CFLAGS += -W -Wall -Wno-unused-parameter -fno-strict-aliasing -I. -I../include
 
 bin_PROGRAMS = rlogger rloggerd
 sbin_PROGRAMS = rlogd
-noinst_LIBRARIES = librlog.a
  
-noinst_HEADERS = buffer.h common.h protocol.h rlogd.h librlog.h
-
-librlog_a_SOURCES = librlog.c common.c
+noinst_HEADERS = buffer.h common.h protocol.h rlogd.h ../include/librlog.h
 
 rlogger_SOURCES = rlogger.c common.c
 rlogger_CFLAGS = $(EV_CPPFLAGS)
